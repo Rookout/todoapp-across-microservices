@@ -1,6 +1,6 @@
 const rookout = require('rookout/openwhisk');
 
-rookout.connect('cloud.agent.rookout.com', 443, 'e11fd0828f1498af3bedc250f8bc67dc0945383bf8d7f15138318daa9ac9a251');
+rookout.connect('wss://control.rookout.com', 443, 'e11fd0828f1498af3bedc250f8bc67dc0945383bf8d7f15138318daa9ac9a251');
 
 function myAction(args) {
     const leftPad = require("left-pad")
