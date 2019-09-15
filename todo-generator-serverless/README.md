@@ -1,22 +1,13 @@
-# Quickstart for Node + Agentless Rookout on IBM Cloud Functions
+# Quickstart for Node + Rookout on IBM Cloud Functions
 
-A sample application for using Node + Agentless Rookout on IBM Cloud Functions
-<details>
-<summary>What is Agentless?</summary>
-<p>
-Instead of having to install your own Agent own the machine you are running the code from,
-you can use one of our hosted Agents and just tell the Rook to connect to it.<br/>
-For more information you can see <a href="https://docs.rookout.com/docs/installation-agent-remote.html">our documentation</a>
-</p>
-</details>
-
+A sample application for using Node + Rookout on IBM Cloud Functions
 
 Before following this guide we recommend reading the basic [Node + Rookout] guide
 
 
 ## Rookout Integration Explained
 
-There are 3 simple steps to integrate Rookout into your existing Node application for an [agentless] setup:
+There are 3 simple steps to integrate Rookout into your existing Node application:
 
 1. Add the npm dependency `rookout`
 
@@ -64,7 +55,7 @@ We have added Rookout to the original project by:
 ```javascript
 const rookout = require('rookout/openwhisk');
 
-rookout.connect('cloud.agent.rookout.com', 443, ORG_TOKEN);
+rookout.connect('wss://control.rookout.com', 443, ORG_TOKEN);
 ```
 
 1. Wrapping your function with the IBM Cloud Function wrapper as such:  
